@@ -13,8 +13,8 @@ var WIZARD_COATCOLORS = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 10
 var WIZARD_EYESCOLORS = ['black', 'red', 'blue', 'yellow', 'green'];
 
 var getRandElement = function (arr) {
-    var rand = Math.floor(Math.random() * arr.length);
-    return arr[rand];
+  var rand = Math.floor(Math.random() * arr.length);
+  return arr[rand];
 };
 
 var wizards = [
@@ -48,7 +48,7 @@ var renderWizard = function (wizard) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizards[i].eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < wizards.length; i++) {
