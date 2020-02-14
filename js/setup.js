@@ -5,9 +5,10 @@
       .content
       .querySelector('.setup-similar-item');
 
-  var MIN_NAME_LENGTH = 2;
   var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Лолита', 'Вашингтон'];
   var WIZARD_SURNAMES = ['де Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
+  var WIZARD_COATCOLORS = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
+  var WIZARD_EYESCOLORS = ['black', 'red', 'blue', 'yellow', 'green'];
 
   var getRandElement = function (arr) {
     var rand = Math.floor(Math.random() * arr.length);

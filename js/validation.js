@@ -1,6 +1,9 @@
 // ----------- Перевод ошибок валидации форм ----------
 'use strict';
 (function () {
+  var MIN_NAME_LENGTH = 2;
+  var setupDialogElement = document.querySelector('.setup');
+  var userNameInput = setupDialogElement.querySelector('.setup-user-name');
   userNameInput.addEventListener('invalid', function () {
     if (userNameInput.validity.tooShort) {
       userNameInput.setCustomValidity('Имя должно состоять минимум из 2-х символов');

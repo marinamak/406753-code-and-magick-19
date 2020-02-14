@@ -1,4 +1,5 @@
 // ---------- Открытие окна настройки персонажа ------------
+'use strict';
 (function () {
   var setupDialogElement = document.querySelector('.setup');
   var setupOpen = document.querySelector('.setup-open');
@@ -44,7 +45,7 @@
       if (dragged) {
         var onClickPreventDefault = function (clickEvt) {
           clickEvt.preventDefault();
-          dialogHandler.removeEventListener('click', onClickPreventDefault)
+          dialogHandler.removeEventListener('click', onClickPreventDefault);
         };
         dialogHandler.addEventListener('click', onClickPreventDefault);
       }
@@ -56,15 +57,15 @@
 
   var removeEventListener = function () {
     document.removeEventListener('keydown', onPopupEscPress);
-  }
+  };
 
   var onPopupEscPress = function (evt) {
     window.util.isEscEvent(evt, closePopup);
   };
 
   var openPopup = function () {
-    setupDialogElement.style.top = 80 + "px";
-    setupDialogElement.style.left = 50 + "%";
+    setupDialogElement.style.top = 80 + 'px';
+    setupDialogElement.style.left = 50 + '%';
     setupDialogElement.classList.remove('hidden');
     document.addEventListener('keydown', onPopupEscPress);
   };
